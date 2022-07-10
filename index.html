@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nicholas Moore</title>
+<link rel="stylesheet" href="styleDoc.css">
+</head>
+
+<body id="aboutPage">
+    <div class="regularHeader">
+        
+        <a class="logo">Nicholas Moore</a>
+        <div class = " lightLink websiteLinks">
+            <a href="index.html">About</a>
+            <a href="work.html">Work</a>
+            <a href="youtube.html">Youtube</a>
+        </div>
+        <p id="date" class="lightText"></p>
+        <script>
+            n =  new Date();
+            y = n.getFullYear();
+            m = n.getMonth() + 1;
+            d = n.getDate();
+            document.getElementById("date").innerHTML = m + ". " + d + ". " + y;
+            </script>
+
+    </div>
+
+    <div class="hamburgerHeader">
+        <div class="hamburgerButton">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+    <div class="hamburgerLinks">
+        <a class = "lightLink" href="index.html">Home</a>
+        <a class = "lightLink" href="work.html">Work</a>
+        <a class = "lightLink" href="youtube.html">Youtube</a>
+    </div>
+
+    <div id="aboutMe">
+        <div id="profilePhotoDiv">
+           <img src="profilePhoto.jpg">
+        </div>
+        <p class="text lightText">Hello, I'm Nicholas Moore.
+            <br>
+            <br>
+            I was born in North Carolina and grew up in Sydney, Australia. I’m 22
+            and I love arts and crafts, which grew into an obsession to create
+            things in my free time. When I’m not doing product design, I like
+            playing guitar, watching and creating youtube videos, refining my
+            coding skills and enjoying movie night with my roommates.
+            <br>
+            <br>
+            nichdmoore@gmail.com
+        </p>
+    </div>
+
+</body>
+
+<script>
+    const hamburgerButton = document.querySelector(".hamburgerButton");
+    const hamburgerLinks = document.querySelector(".hamburgerLinks");
+    
+    hamburgerButton.addEventListener("click", () => {
+        hamburgerLinks.classList.toggle("fade");
+    });
+
+</script>
+
+
+</html>
