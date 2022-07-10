@@ -1,0 +1,480 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: white;}
+
+@font-face {
+  font-family: wslight;
+  src: url(WorkSans-Light.ttf);
+  /*src: url(WorkSans-Light.ttf);*/
+}
+
+@font-face {
+  font-family: wsregular;
+  src: url(WorkSans-Regular.ttf);
+  /*src: url(WorkSans-Regular.ttf);*/
+}
+
+@font-face {
+  font-family: wsmedium;
+  /* src: url(/Users/nicholasmoore/Desktop/portfolio2021/personalPortfolio/Work_Sans/static/WorkSans-Medium.ttf); */
+  src: url(WorkSans-Medium.ttf);
+}
+
+@font-face {
+  font-family: wsthin;
+  /* src: url(/Users/nicholasmoore/Desktop/portfolio2021/personalPortfolio/Work_Sans/static/WorkSans-Thin.ttf); */
+  src: url(WorkSans-Thin.ttf);
+}
+
+// UNIVERSAL SETTINGS
+body {
+  background-color: #323639;
+}
+
+// MOBILE
+@media only screen and (max-width: 750px) {
+  .lightText {
+    font-family: wslight;
+    font-size: 15px;
+    cursor: default;
+  }
+  .lightLink {
+    font-family: wslight;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  .regularHeader {
+    display: none;
+  }
+
+  .hamburgerHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    .hamburgerButton {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 40px;
+      height: 30px;
+      cursor: pointer;
+      .bar {
+        border-radius: 2px;
+        height: 4px;
+        width: 100%;
+        background-color: white;
+      }
+    }
+  }
+  .hamburgerLinks {
+    a {
+      font-size: 20px;
+    }
+    transition: all ease 0.5s;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 2;
+    background-color: #323639;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+    width: 100vw;
+  }
+  .fade {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  #aboutPage {
+    #aboutMe {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5vh;
+      width: 75vw;
+      row-gap: 5vw;
+      .text {
+        font-size: 13px;
+      }
+      img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  #workPage {
+    .desktopProjectsDashboard {
+      display: none;
+    }
+
+    .mobileProjectsDashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(375px, 0.6fr));
+      justify-content: center;
+      column-gap: 10px;
+      row-gap: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      .projectBox {
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        a {
+          z-index: 1;
+          background-color: #44444443;
+          backdrop-filter: blur(10px);
+          text-align: center;
+          border: solid rgb(129, 129, 129) 1px;
+          width: 80%;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+        .bgImage {
+          position: absolute;
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+  }
+
+  .projectPage {
+    .projectPageSection {
+      p {
+          color: #181818;
+      }
+        padding-top: 100px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+      .projectDescription {
+      p{
+          width: 35vw;
+      }
+        text-align: left;
+        width: 70vw;
+      }
+      .projectImages {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 100px;
+        img {
+            width: 70vw;
+            height: 45vw;
+            object-fit: cover;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  
+}
+
+
+// TABLET
+@media only screen and (min-width: 751px) {
+
+  .lightText {
+    font-family: wslight;
+    font-size: 15px;
+    cursor: default;
+  }
+  .lightLink {
+    font-family: wslight;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  .hamburgerMenu {
+    display: none;
+  }
+  .hamburgerLinks {
+    display: none;
+  }
+
+  .regularHeader {
+    display: flex;
+    font-family: wslight;
+    font-size: 15px;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    .logo {
+      cursor: pointer;
+    }
+    #date {
+      cursor: default;
+    }
+    .websiteLinks {
+      a{cursor: pointer;}
+      display: flex;
+      margin: auto;
+      width: 30vw;
+      justify-content: space-between;
+    }
+  }
+  
+  #aboutPage {
+    #aboutMe {
+  
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 100px;
+      width: 50vw;
+      row-gap: 5vw;
+      img{
+        object-fit: cover;
+        width: 50vw;
+        height: 50vw;
+      }
+    }
+  }
+
+
+  #workPage {
+    .desktopProjectsDashboard {
+      display: none;
+    }
+
+    .mobileProjectsDashboard {
+      display: grid;
+      grid-template-columns: 50vw 50vw;
+      .projectBox {
+        height: 32vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        a {
+          z-index: 1;
+          background-color: #44444443;
+          backdrop-filter: blur(10px);
+          text-align: center;
+          border: solid rgb(129, 129, 129) 1px;
+          width: 40vw;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+        .bgImage {
+          position: absolute;
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+  }
+
+  .projectPage {
+    .projectPageSection {
+      p {
+          color: #181818;
+      }
+        margin-top: 25px;
+        padding-top: 100px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+      .projectDescription {
+      p{
+          width: 35vw;
+      }
+        text-align: left;
+        width: 70vw;
+      }
+      .projectImages {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 100px;
+        img {
+            width: 70vw;
+            height: 45vw;
+            object-fit: cover;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+// DESKTOP
+@media only screen and (min-width: 1100px) {
+
+  .lightText {
+    font-family: wslight;
+    font-size: 15px;
+    cursor: default;
+  }
+  .lightLink {
+    font-family: wslight;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  .hamburgerMenu {
+    display: none;
+  }
+  .hamburgerLinks {
+    display: none;
+  }
+
+  .regularHeader {
+    display: flex;
+    font-family: wslight;
+    font-size: 15px;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    .logo {
+      cursor: pointer;
+    }
+    #date {
+      cursor: default;
+    }
+    .websiteLinks {
+      a{cursor: pointer;}
+      display: flex;
+      margin: auto;
+      width: 30vw;
+      justify-content: space-between;
+    }
+  }
+  
+  #aboutPage {
+    #aboutMe {
+      margin-top: 10vh;
+      width: 80vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      #text {
+        margin-left: 3vw;
+      }
+      #profilePhotoDiv{
+        margin-right: 3vw;
+        img{
+          object-fit: cover;
+          width: 40vw;
+          height: 700px;
+        }
+      }
+    }
+  }
+
+
+  #workPage {
+    .mobileProjectsDashboard {
+      display: none;
+    }
+    .desktopProjectsDashboard {
+      display: grid;
+      grid-template-columns: 20vw 80vw;
+      height: 70vh;
+      background-color: antiquewhite;
+      overflow: hidden;
+
+      #owlImage {opacity: 1;}
+      #enmoImage {opacity: 0;}
+      #assistantImage {opacity: 0;}
+      #sketch360Image {opacity: 0;}
+      #projectImage {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        .bgImage {
+          transition: all ease 0.5s;
+          position: absolute;
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+      }
+      }
+
+      .projectsPanel {
+        background-color: rgb(15, 15, 15);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        padding: 25px;
+        a {
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+  }
+
+
+  .projectPage {
+    .projectPageSection {
+      p {
+          color: #181818;
+      }
+        margin-top: 25px;
+        padding-top: 100px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+      .projectDescription {
+      p{
+          width: 35vw;
+      }
+        text-align: left;
+        width: 70vw;
+      }
+      .projectImages {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 100px;
+        img {
+            width: 70vw;
+            height: 45vw;
+            object-fit: cover;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+
+}
