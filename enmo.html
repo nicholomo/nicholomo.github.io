@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nicholas Moore - Enmo</title>
+<link rel="stylesheet" href="styleDoc.css">
+</head>
+
+
+<body id="enmoPage" class="projectPage">
+
+    <div class="regularHeader">
+        
+        <a class="logo">Nicholas Moore</a>
+        <div class = " lightLink websiteLinks">
+            <a href="index.html">About</a>
+            <a href="work.html">Work</a>
+            <a href="youtube.html">Youtube</a>
+        </div>
+        <p id="date" class="lightText"></p>
+        <script>
+            n =  new Date();
+            y = n.getFullYear();
+            m = n.getMonth() + 1;
+            d = n.getDate();
+            document.getElementById("date").innerHTML = m + ". " + d + ". " + y;
+            </script>
+
+    </div>
+
+    <div class="hamburgerHeader">
+        <div class="hamburgerButton">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+    <div class="hamburgerLinks">
+        <a class = "lightLink" href="index.html">Home</a>
+        <a class = "lightLink" href="work.html">Work</a>
+        <a class = "lightLink" href="youtube.html">Youtube</a>
+    </div>
+
+
+<!-- DESKTOP -->
+
+<div class="projectPageSection">
+
+    <div class="projectDescription">
+        <p class = "lightText">
+            <span style="font-family: wsregular; color: #181818">Enmo Leather Goods</span>
+            <br>Personal project & hobby.
+            <br>
+            <br>My handmade leather goods brand of bags and wallets
+            <br>
+            <br> For in-depth case studies and process, contact me at nichdmoore@gmail.com.
+        </p>
+    </div>
+
+    <div class = "projectImages">
+        <img src="brandBoard.jpg" style="border:1px solid black">
+        <img src="packagingBoard.jpg" style="border:1px solid black">
+        <img src="craftBoard.jpg" style="border:1px solid black">
+    </div>
+
+</div>
+
+
+<!-- MOBILE -->
+
+
+</body>
+
+<script>
+    const hamburgerButton = document.querySelector(".hamburgerButton");
+    const hamburgerLinks = document.querySelector(".hamburgerLinks");
+    
+    hamburgerButton.addEventListener("click", () => {
+        hamburgerLinks.classList.toggle("fade");
+    });
+
+</script>
+
+
+</html>
