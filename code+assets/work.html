@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Work</title>
+<link rel="stylesheet" href="styleDoc.css">
+</head>
+
+
+<body id="workPage">
+
+    <div class="regularHeader">
+        
+        <a class="logo">Nicholas Moore</a>
+        <div class = " lightLink websiteLinks">
+            <a href="index.html">Home</a>
+            <a href="work.html">Work</a>
+            <a href="youtube.html">Youtube</a>
+        </div>
+        <p id="date" class="lightText"></p>
+        <script>
+            n =  new Date();
+            y = n.getFullYear();
+            m = n.getMonth() + 1;
+            d = n.getDate();
+            document.getElementById("date").innerHTML = m + ". " + d + ". " + y;
+            </script>
+
+    </div>
+
+    <div class="hamburgerHeader">
+        <div class="hamburgerButton">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+    <div class="hamburgerLinks">
+        <a class = "lightLink" href="index.html">About</a>
+        <a class = "lightLink" href="work.html">Work</a>
+        <a class = "lightLink" href="youtube.html">Youtube</a>
+    </div>
+
+
+<!-- DESKTOP -->
+    <div class = "desktopProjectsDashboard">
+        <div class = "projectsPanel" id = "owlBanner">
+            <a href = "owl.html" class = "lightLink" id = "enterOwl">OWL</a>
+            <a href = "enmo.html" class = "lightLink" id = "enterEnmo">Enmo Leather Goods</a>
+            <a href = "assistant.html" class = "lightLink" id = "enterAssistant">Assistant</a>
+            <a href = "reWrite.html" class = "lightLink" id = "enterSketch360">reWrite</a>
+        </div>
+        <div id = "projectImage">
+            <img class = "bgImage" id = "owlImage" src = "contextWalking.jpg">
+            <img class = "bgImage" id = "enmoImage" src = "wallet.jpg">
+            <img class = "bgImage" id = "assistantImage" src = "heroAssistant.jpg">
+            <img class = "bgImage" id = "sketch360Image" src = "context.jpg">
+        </div>
+    </div>
+
+    <script>
+    const owl = document.querySelector("#enterOwl");
+    const enmo = document.querySelector("#enterEnmo");
+    const assistant = document.querySelector("#enterAssistant");
+    const sketch360 = document.querySelector("#enterSketch360");
+    
+    const owlImage = document.querySelector("#owlImage");
+    const enmoImage = document.querySelector("#enmoImage");
+    const assistantImage = document.querySelector("#assistantImage");
+    const sketch360Image = document.querySelector("#sketch360Image");
+
+    owl.addEventListener("mouseover", () => {
+        owlImage.style.opacity = "1"
+        enmoImage.style.opacity = "0"
+        assistantImage.style.opacity = "0"
+        sketch360Image.style.opacity = "0"
+    });
+    enmo.addEventListener("mouseover", () => {
+        owlImage.style.opacity = "0"
+        enmoImage.style.opacity = "1"
+        assistantImage.style.opacity = "0"
+        sketch360Image.style.opacity = "0"
+    });
+    assistant.addEventListener("mouseover", () => {
+        owlImage.style.opacity = "0"
+        enmoImage.style.opacity = "0"
+        assistantImage.style.opacity = "1"
+        sketch360Image.style.opacity = "0"
+    });
+    sketch360.addEventListener("mouseover", () => {
+        owlImage.style.opacity = "0"
+        enmoImage.style.opacity = "0"
+        assistantImage.style.opacity = "0"
+        sketch360Image.style.opacity = "1"
+    });
+    
+    </script>
+
+
+<!-- MOBILE -->
+    <div class = "mobileProjectsDashboard">
+        <div class = "projectBox">
+            <a class = "lightLink" id = "enterOWL">OWL</a>
+            <img class = "bgImage" id = "owlImage" src = "contextWalking.jpg">
+        </div>
+        <div class = "projectBox">
+            <a class = "lightLink" id = "enterEnmmo">Enmo Leather Goods</a>
+            <img class = "bgImage" id = "enmoImage" src = "wallet.jpg">
+        </div>
+        <div class = "projectBox">
+            <a class = "lightLink" id = "enterAssistant">Assistant Coffee Brewer</a>
+            <img class = "bgImage" id = "assistantImage" src = "heroAssistant.jpg">
+        </div>
+        <div class = "projectBox">
+            <a class = "lightLink" id = "enterSketch360">Sketch 360</a>
+            <img class = "bgImage" id = "sketch360Image" src = "context.jpg">
+        </div>
+    </div>
+
+
+</body>
+
+
+<script>
+    const hamburgerButton = document.querySelector(".hamburgerButton");
+    const hamburgerLinks = document.querySelector(".hamburgerLinks");
+    
+    hamburgerButton.addEventListener("click", () => {
+        hamburgerLinks.classList.toggle("fade");
+    });
+
+</script>
+
+
+</html>

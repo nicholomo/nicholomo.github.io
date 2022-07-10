@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Youtube</title>
+<link rel="stylesheet" href="styleDoc.css">
+</head>
+
+
+<body id="youtubePage">
+
+    <div class="regularHeader">
+        
+        <a class="logo">Nicholas Moore</a>
+        <div class = " lightLink websiteLinks">
+            <a href="index.html">About</a>
+            <a href="work.html">Work</a>
+            <a href="youtube.html">Youtube</a>
+        </div>
+        <p id="date" class="lightText"></p>
+        <script>
+            n =  new Date();
+            y = n.getFullYear();
+            m = n.getMonth() + 1;
+            d = n.getDate();
+            document.getElementById("date").innerHTML = m + ". " + d + ". " + y;
+            </script>
+
+    </div>
+
+    <div class="hamburgerHeader">
+        <div class="hamburgerButton">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+    <div class="hamburgerLinks">
+        <a class = "lightLink" href="index.html">About</a>
+        <a class = "lightLink" href="work.html">Work</a>
+        <a class = "lightLink" href="youtube.html">Youtube</a>
+    </div>
+
+</body>
+
+
+<script>
+    const hamburgerButton = document.querySelector(".hamburgerButton");
+    const hamburgerLinks = document.querySelector(".hamburgerLinks");
+    
+    hamburgerButton.addEventListener("click", () => {
+        hamburgerLinks.classList.toggle("fade");
+    });
+
+</script>
+
+
+</html>

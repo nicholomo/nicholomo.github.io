@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: wslight;
+  /* src: url(/Users/nicholasmoore/Desktop/portfolio2021/personalPortfolio/Work_Sans/static/WorkSans-Light.ttf); */
+  src: url(WorkSans-Light.ttf);
+}
+
+@font-face {
+  font-family: wsmedium;
+  /* src: url(/Users/nicholasmoore/Desktop/portfolio2021/personalPortfolio/Work_Sans/static/WorkSans-Medium.ttf); */
+  src: url(WorkSans-Medium.ttf);
+}
+
+@font-face {
+  font-family: wsthin;
+  /* src: url(/Users/nicholasmoore/Desktop/portfolio2021/personalPortfolio/Work_Sans/static/WorkSans-Thin.ttf); */
+  src: url(WorkSans-Thin.ttf);
+}
+
+.designeyFont {
+  font-family: wsmedium;
+  font-size: 30px;
+}
+
+.pageHeaderFontLight {
+  font-family: wslight;
+  font-size: 13px;
+}
+
+.pageHeaderFontMedium {
+  font-family: wsmedium;
+  font-size: 13px;
+}
+
+.headerFont {
+  font-family: wsmedium;
+  font-size: 20px;
+}
+
+.subHeaderFont {
+  font-family: wslight;
+  font-size: 20px;
+}
+
+.paragraphFont {
+  font-family: wslight;
+  font-size: 16px;
+}
+
+.header {
+  z-index: 2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50vw 50vw;
+      grid-template-columns: 50vw 50vw;
+      grid-template-areas: "topLeft topRight" "bottomLeft bottomRight";
+  margin-top: 20px;
+  position: absolute;
+}
+
+.header .topRight {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: topRight;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 5vw;
+  margin-left: 3vw;
+}
+
+.header .topRight a {
+  cursor: pointer;
+}
+
+.header .topLeft {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: topLeft;
+  margin-left: 20px;
+}
+
+.header .topLeft p {
+  cursor: default;
+}
+
+.header .bottomLeft {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: bottomLeft;
+  margin-left: 20px;
+}
+
+.header .bottomLeft p {
+  cursor: default;
+}
+
+.footer {
+  width: 100vw;
+  height: 100px;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.baseRectangle, #homeAndContact .rectangle {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
+  background-color: #1a2b33;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.baseRectangle div, #homeAndContact .rectangle div {
+  margin-left: 3vw;
+  cursor: default;
+}
+
+#homeAndContact .rectangle {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#homeAndContact .rectangle #aboutMeParagraph {
+  margin-top: 50px;
+  width: 40vw;
+}
+
+#homeAndContact .rectangle #contactButton {
+  margin-top: 50px;
+  outline: 1px solid white;
+  padding: 10px;
+  width: 20vw;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#homeAndContact #profileImageDiv {
+  width: 50vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#homeAndContact #profileImageDiv img {
+  width: 100%;
+}
+
+#portfolioPage .header {
+  background-color: #1a2b33;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+#portfolioPage #portfolioGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50vw 50vw;
+      grid-template-columns: 50vw 50vw;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+  row-gap: 5px;
+  margin-bottom: 5px;
+}
+
+#portfolioPage #portfolioGrid .portfolioItem {
+  height: 30vw;
+  background-color: #e0e0e0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#portfolioPage #portfolioGrid .portfolioItem img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.defaultPortfolioPage .header {
+  background-color: #1a2b33;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.defaultPortfolioPage .headerFont {
+  color: black;
+}
+
+.defaultPortfolioPage .subHeaderFont {
+  color: black;
+}
+
+.defaultPortfolioPage .paragraphFont {
+  color: black;
+}
+
+.defaultPortfolioPage .productIntro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 7.5vw;
+  margin-top: 5vh;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 50vw;
+}
+
+.defaultPortfolioPage .productIntro .paragraphFont {
+  margin-top: 20px;
+}
+
+.defaultPortfolioPage .productGallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.defaultPortfolioPage .productGallery img {
+  width: 85vw;
+  margin: 10px;
+  margin-top: 50px;
+  margin-bottom: 7.5vw;
+  border: 1px solid black;
+}
+/*# sourceMappingURL=styleGuide.css.map */
