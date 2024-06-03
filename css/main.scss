@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+    font-family: wslight;
+  }
+  
+  @font-face {
+    font-family: wslight;
+    src: url(/assets/WorkSans-Light.ttf);
+    /*src: url(WorkSans-Light.ttf);*/
+  }
+
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    #logo {
+      width: 55px;
+      height: auto;
+      cursor: pointer;
+    }
+  }
+
+  #aboutMeContainer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    #aboutMe {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      gap: 50px;
+    #profilePhoto {
+      width: 27vw;
+      height: auto;
+      }
+    #aboutMeText {
+      width: 40%;
+      line-height: 1.5;
+      }
+    }
+  }
+
+  #portfolioGridContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    width: 100vw;
+    #portfolioGrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      column-gap: 25px;
+      row-gap: 25px;
+      width: 90%;
+      .project {
+        display: flex;
+        aspect-ratio: 4/2.75;
+        cursor: pointer;
+        img{
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+
+
+  #assistantPage {
+    background-color: rgb(251, 251, 251);
+  }
+
+
+  .projectPresentationContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    padding-top: 5vw;
+    margin-bottom: 100px;
+    width: 100vw;
+    .projectPresentation {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      width: 90%;
+        img{
+          width: 100%;
+          object-fit: cover;
+        }
+    }
+  }
